@@ -1,0 +1,14 @@
+.type-filter select {
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+  
+  .type-filter select:focus {
+    outline: none;
+    border-color: #3498db;
+  }

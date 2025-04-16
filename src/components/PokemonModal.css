@@ -1,0 +1,313 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .pokemon-modal {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 15px;
+    padding: 30px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s ease-out;
+  }
+  
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .close-modal:hover {
+    transform: scale(1.2);
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    text-transform: capitalize;
+    font-size: 2rem;
+  }
+  
+  .pokemon-id {
+    font-weight: bold;
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+  
+  .modal-header .favorite-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 1px 1px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .modal-header .favorite-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .modal-header .favorite-btn.active {
+    background: rgba(231, 76, 60, 0.2);
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .modal-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-image-container img {
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
+  }
+  
+  .modal-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .types h3, .stats h3, .abilities h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+  }
+  
+  .type-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .type-badge {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .stat-row {
+    margin-bottom: 10px;
+  }
+  
+  .stat-name {
+    display: inline-block;
+    width: 100px;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+  
+  .stat-bar-container {
+    display: inline-block;
+    width: calc(100% - 110px);
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .stat-bar {
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    text-align: right;
+    padding-right: 5px;
+    font-size: 0.8rem;
+    color: #2c3e50;
+    font-weight: bold;
+    line-height: 20px;
+  }
+  
+  .physical-details {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .detail {
+    text-align: center;
+  }
+  
+  .detail h4 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+  }
+  
+  .detail p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .ability-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .ability-badge {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .nrmlbtn {
+    border-radius: 20px;
+    background: #c7b2b2;
+    background-size: 300% 300%;
+   
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: none;
+    margin: 0px 20px;
+    box-shadow: 0 0 8px rgba(244, 67, 54, 0.4),
+                inset 0 0 10px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  
+  
+  
+ 
+  
+  /* Optional hover effect */
+  .nrmlbtn:hover {
+    background-size: 150% 150%;
+    box-shadow: 0 0 12px rgba(244, 67, 54, 0.6),
+                inset 0 0 15px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+
+  .shnbtn {
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ff9966, #d2c463, #ff5f8d, #c04de2, #6f73e5, #41c7af);
+    background-size: 400% 400%;
+    animation: shine 3s ease infinite;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    margin: 0px 20px;
+    border: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+                inset 0 0 15px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shnbtn::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    animation: sparkle 4s linear infinite;
+  }
+  
+  @keyframes shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @keyframes sparkle {
+    0% { transform: rotate(30deg) translateY(100%); }
+    100% { transform: rotate(30deg) translateY(-100%); }
+  }
+  
+  /* Optional hover effect */
+  .shnbtn:hover {
+    background-size: 200% 200%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 
+                inset 0 0 20px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+  @media (max-width: 768px) {
+    .pokemon-modal {
+      width: 95%;
+      padding: 20px;
+    }
+    
+    .modal-content {
+      flex-direction: column;
+    }
+    
+    .modal-details {
+      grid-template-columns: 1fr;
+    }
+    
+    .physical-details {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+
+
+
+  .image-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
